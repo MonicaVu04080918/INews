@@ -1,0 +1,36 @@
+{
+  "name": "s2-p2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "dev": "nodemon --env-file=.env server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://csegitlab.engineering.unt.edu/csce-3444/fall2025/s2-p2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@huggingface/inference": "^4.13.3",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "install": "^0.13.0",
+    "jest": "^30.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.19.3",
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.10",
+    "resend": "^6.1.2",
+    "supertest": "^7.1.4"
+  }
+}
