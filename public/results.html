@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iNews-Search results</title>
+  <link rel="stylesheet" href="results.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="body">
+  <header>
+    <div class="header-content">
+      <div class="header">
+
+        <h1 class="logo" id="logo">INEWS</h1>
+
+        <div class="user-controls" style="display: flex; align-items: center; gap: 15px;">
+
+          <a href="login.html" id="loginNavButton" style="text-decoration: none; color: #333; font-weight: bold;">
+            Login / Sign Up
+          </a>
+
+          <div id="userDropdown" class="dropdown hidden">
+            <div class="dropbtn" style="display: flex; align-items: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <div class="dropdown-content">
+              <span id="userGreeting" class="menu-text">Hello!</span>
+              <hr style="margin: 5px 0; border: 0; border-top: 1px solid #eee;">
+              <button id="logoutButton" class="menu-item">Logout</button>
+            </div>
+          </div>
+
+          <button id="openBlockingModalBtn"
+            style="background-color: #333; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+            ⚙️ Manage Blocks
+          </button>
+
+
+          <button id="changeDisplayButton" style="padding: 8px 15px; cursor: pointer;">Dark Mode</button>
+        </div>
+
+        <p class="homeIcon">
+          <a href="index.html">
+            <img src="./images/3441648.png" alt="Homepage" width="40" height="40">
+          </a>
+        </p>
+
+      </div>
+    </div>
+  </header>
+  <hr>
+  <div class="action">
+    <section id="weather-section">
+      <div class="wrapper">
+        <div class="weather-bar">
+          <div class="forecast-container" id="forecast-container" style="display: none;">
+            <!--future forecast cards will be here-->
+          </div>
+          <button id="expand-forecast">◀</button>
+          <div class="temperature" id="temperature">22°</div>
+          <img src="https://openweathermap.org/img/wn/01d.png" alt="weather-icon" class="icon" id="weather-icon" />
+          <div class="details">
+            <span class="condition" id="condition">Sunny</span>
+            <span class="city" id="city">New York</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="breakingSectionContainer" style="display:none; margin-bottom: 20px;">
+    <h1 style="display: flex; align-items: center; gap: 10px;">
+      Top Stories
+    </h1>
+    <div id="breakingSection"></div>
+  </div>
+  <h1 id="test-title">Discovered by You</h1>
+  <div class="discoveredSection" id="discoveredSection">
+    <div class="news-widget">
+      <a href="https://youtu.be/RYI-WG_HFV8?si=bteN3a1J3SG7dAgO" target="_blank">
+        <img src="./images/shibuya.avif">
+        <h3>Headline: MAN FIGHTS AIR IN SUBWAY STATION</h3>
+        <h4>Description: John decides to break a record he always wanted to</h4>
+        <h5>News Source:</h5>
+        <h5>Date:</h5>
+      </a>
+    </div>
+    <div class="news-widget">
+      <a href="https://youtu.be/RYI-WG_HFV8?si=bteN3a1J3SG7dAgO" target="_blank">
+        <img src="./images/light.webp">
+        <h3>Headline: MAN DISCOVERS LIGHT IN HIS BACKYARD</h3>
+        <h4>Description: John decides to break a record he always wanted to</h4>
+        <h5>News Source:</h5>
+        <h5>Date:</h5>
+      </a>
+    </div>
+  </div>
+
+  <h1>Recommendations For You</h1>
+  <div class="recommendedSection" id="recommendedSection">
+  </div>
+
+  <h1>Deep search</h1>
+  <div class="hybridSection" id="hybridSection"></div>
+
+  <h1>Related Videos</h1>
+  <div class="videoSection" id="videoSection">
+  </div>
+  <!-- we most likely would not need this since we have recently viewed
+    <h1>Continue Reading</h1>
+    <div class="C"></div>
+    <div id="results">
+    </div>
+  -->
+
+  <h1>Recently Viewed</h1>
+  <div id="history"></div>
+
+  <h1>Saved articles</h1>
+  <div id="savedArticlesContainer"></div>
+
+  </div>
+
+
+  <div id="blockingModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <span class="close-modal" style="cursor:pointer; float:right; font-size:28px;">&times;</span>
+      <h2>Manage Blocked Content</h2>
+
+      <div id="blockingLoginMsg" style="display:none;"></div>
+
+      <div id="blockingForm">
+        <p>Customize your feed by blocking specific topics or sources.</p>
+
+        <div class="section">
+          <h3>Block Topics</h3>
+          <div class="input-group">
+            <input type="text" id="topicInput" placeholder="e.g., sports">
+            <button onclick="window.blockTopic()">Block</button>
+          </div>
+          <div id="topicMessage" class="message" style="display: none;"></div>
+          <div class="list" id="topicsList"></div>
+        </div>
+
+        <div class="section">
+          <h3>Block Sources</h3>
+          <div class="input-group">
+            <select id="sourceInput">
+              <option value="" disabled selected>Select a source...</option>
+            </select>
+            <button onclick="window.blockSource()">Block</button>
+          </div>
+          <div id="sourceMessage" class="message" style="display: none;"></div>
+          <div class="list" id="sourcesList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <hr />
+    <div class="footer-content">
+      <p>
+        <button id="weButton"
+          style="background-color: #333; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+          Enable/Disable Weekly Emails </button>
+      </p>
+      <p><a href="https://csegitlab.engineering.unt.edu/csce-3444/fall2025/s2-p2/-/issues"></a>Report an Issue</p>
+      <p> © 2025 INews. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="weatherBar.js" defer></script>
+  <script type="module" src="script.js" defer></script>
+</body>
+
+</html>

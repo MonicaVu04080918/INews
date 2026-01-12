@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iNews-Homepage</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <header>
+      <div class="header-content">
+        <button id="changeDisplayButton">Dark Mode</button>
+        <p>About Us</p>
+        <p>How it works</p>
+        <p><a href="login.html" id="loginNavButton">Login/Sign Up!</a></p>
+        <span id="userGreeting" class ="hidden"> </span>
+        <button id ="logoutButton" class="hidden">Logout</button>
+      </div>
+      <hr />
+    </header>
+      <!--Weather bar -->
+      <section id="weather-section">
+        <div class="weather-bar">
+          <div class="temperature" id="temperature">22°</div>
+          <img src="https://openweathermap.org/img/wn/01d.png" alt="weather-icon" class="icon" id="weather-icon" />
+          <div class="details">
+            <span class="condition" id="condition">Sunny</span>
+            <span class="city" id="city">New York</span>
+          </div>
+        </div>
+        <script src="weatherBar.js" defer></script>
+      </section>
+      <!--<script src="script.js" type="module"></script>-->
+    <div class="action">
+      <div class="branding">
+        <h1>INews</h1>
+        <h2>Your Eyes. Your News. Your Way.</h2>
+        <h3>Stay informed with curated stories tailored to your interest</h3>
+      </div>
+      <div class="searchSection">
+        <form id="searchBar">
+          <input type="text" id="userInput" placeholder="Enter term of interest" />
+          <button type="submit" id="form-button">
+            <img src="./images/search.svg">
+          </button>
+        </form>
+        <button id="openBlockingModalBtn" style="background-color: #333; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; margin-left: 10px;">
+          Manage Blocks
+      </button>
+      </div>
+      <div class="popularTerms" id = "quickSearchContainer"></div>
+      </header>
+</body>
+
+</html>
+
+</div>
+<footer>
+  <hr />
+  <div class="footer-content">
+    <p><a href="https://csegitlab.engineering.unt.edu/csce-3444/fall2025/s2-p2/-/issues"></a>Report an Issue</p>
+    <p> © 2025 INews. All rights reserved.</p>
+    <p>Contact Us</p>
+  </div>
+</footer>
+</div>
+<div id="blockingModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+        <span class="close-modal" style="cursor:pointer; float:right; font-size:28px;">&times;</span>
+        <h2>Manage Blocked Content</h2>
+
+        <div id="blockingLoginMsg" style="display:none;"></div>
+
+        <div id="blockingForm">
+            <p>Customize your feed by blocking specific topics or sources.</p>
+
+            <div class="section">
+                <h3>Block Topics</h3>
+                <div class="input-group">
+                    <input type="text" id="topicInput" placeholder="e.g., sports">
+                    <button onclick="window.blockTopic()">Block</button>
+                </div>
+                <div id="topicMessage" class="message" style="display: none;"></div>
+                <div class="list" id="topicsList"></div>
+            </div>
+
+            <div class="section">
+                <h3>Block Sources</h3>
+                <div class="input-group">
+                    <select id="sourceInput">
+                      <option value="" disabled selected>Select a source...</option>
+                    </select>
+                    <button onclick="window.blockSource()">Block</button>
+                </div>
+                <div id="sourceMessage" class="message" style="display: none;"></div>
+                <div class="list" id="sourcesList"></div>
+            </div>
+        </div>
+        </div>
+</div>
+<script src="indexScript.js?v=4" type="module"></script>
+<script src="script.js" type="module"></script>
+</body>
+
+</html>

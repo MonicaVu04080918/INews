@@ -1,0 +1,193 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #134e82;
+  margin-right: auto;
+  padding-left: 30px;
+}
+.homeIcon {
+  padding-right: 30px;
+}
+.loginBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+}
+/* Ensure the Login Card looks like a card */
+.login-card {
+    background-color: white; /* Always white background */
+    color: #333;             /* Always dark text */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+
+.login-card input {
+    background-color: #fff !important; 
+    color: #333 !important;
+    border: 1px solid #ccc !important;
+}
+
+.login-card input::placeholder {
+    color: #999 !important;
+}
+
+/* Ensure Links inside the card stay visible */
+.login-card a {
+    color: #007bff; /* Blue links */
+}
+
+/* Specific fix for the Header in Dark Mode */
+header {
+    background: transparent; /* Let the gradient show through */
+}
+
+/* Logo color is handled by script.js, but set default here */
+.logo {
+    color: #333;
+}
+.container {
+  background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  width: 340px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #134e82;
+  font-weight: 500;
+}
+
+.container h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  background: #e7f0fa;
+  border: 1px solid #134e82;
+  color: #134e82;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
+  color: #fff;
+  border: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-container input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border 0.2s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #6bbbff;
+}
+
+.form-container button {
+  background-image: linear-gradient(
+    -225deg,
+    #5d9fff 0%,
+    #b8dcff 48%,
+    #6bbbff 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #134e82;
+}
+
+#changeDisplayButton {
+  background-color: #6BBBFF;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+}
+.form-link {
+  color: #6bbbff; /* Or whatever color your theme uses */
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}

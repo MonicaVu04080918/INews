@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="onBoarding.css" />
+    <title>Welcome to iNews</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Welcome to iNews Reader</h1>
+      <p>Let’s personalize your feed! Tell us a few quick things.</p>
+
+      <h4 id="errorText"></h4>
+
+      <form id="onboardingForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" min="1" max="125" required />
+        <!-- not sure how old it shoul be but 125 seems like the max -->
+
+        <label>Pick your favorite topics:</label>
+        <div class="topics">
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="News" />
+            <span>News</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Sports" />
+            <span>Sports</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Entertainment" />
+            <span>Entertainment</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Technology" />
+            <span>Technology</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Business" />
+            <span>Business</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Health" />
+            <span>Health</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Science" />
+            <span>Science</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="World" />
+            <span>World</span>
+          </label>
+          <label class="topic-item">
+            <input type="checkbox" name="topics" value="Politics" />
+            <span>Politics</span>
+          </label>
+        </div>
+
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+
+    <script src="onBoarding.js" type="module"></script>
+  </body>
+</html>

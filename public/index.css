@@ -1,0 +1,427 @@
+html,body{
+margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background-blend-mode: multiply;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    }
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    min-width: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+ font-weight: 200;
+}
+
+header hr {
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: center;
+    gap: 40px;
+}
+
+.header-content button{
+    background-color: #6BBBFF;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+.action {
+
+ 
+  
+    padding: 10px;
+ display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: auto;
+}
+
+.branding{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.branding h1{
+        margin-bottom: -25px;
+    font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 100px;
+        font-weight: 600;
+        letter-spacing: 5px;
+}
+
+.branding h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+.branding h3{
+font-family: "Inter", sans-serif;
+font-weight: 400;
+}
+
+
+.action input{
+   height: 40px;
+   width: 400px;
+   border-radius: 5px;
+   font-family: sans-serif;
+   font-size: 1em;
+   padding: 5px;
+vertical-align: middle;
+}
+
+.action button{
+  height: 53px;
+  position: relative;
+  background-color: lightblue;
+background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+vertical-align: middle;
+
+border-radius: 5px;
+}
+
+.action img{
+filter: brightness(0) invert(1);
+color: white;
+width: 40px;
+height: auto;
+vertical-align: middle;
+
+}
+
+.searchSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  
+}
+
+.popularTerms{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+   
+  
+   font-family: sans-serif;
+  
+}
+
+footer{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+  min-width: 100%;
+  letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+}
+
+footer hr{
+    width: 100%;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+}
+
+.quickSearch{
+color: gray;
+transition-property: color;
+transition-duration: 0.3s;
+transition-timing-function: ease;
+
+
+}
+
+.quickSearch:hover{
+    color: #6BBBFF;
+    cursor: pointer;
+}
+
+
+
+.news-feed {
+  display: flex;
+  justify-content: space-between;  /* pushes weather widget to the right */
+  align-items: flex-start;
+}
+
+.news-section {
+  flex: 1; /* take the left space */
+}
+/* Weather section positioning (keeps it on top-right of the body) */
+#weather-section {
+    position: fixed;        /* Stay on screen regardless of scroll */
+    top: 100px;              /* Distance from top edge */
+    right: 10px;            /* Distance from right edge */
+    z-index: 100;           /* Above other elements */
+    pointer-events: auto;
+    width: auto;            /* Fit content */
+    box-sizing: border-box;
+}
+
+/* Weather bar styling */
+.weather-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Button on left */
+    background: linear-gradient(135deg, #f6f8fb, #6fb1fc);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 6px 10px;
+    width: 180px;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Temperature */
+.temperature {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+/* Icon */
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+
+/* Details */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.6rem;
+    line-height: 1.1;
+}
+
+.details .condition {
+    font-weight: 600;
+}
+
+.details .city {
+    opacity: 0.85;
+}
+
+
+.hidden {
+    display: none;
+}
+#userGreeting {
+  color: #333; /* Match the color of your other text */
+  margin: 30px; /* Remove default margins if any */
+  font-weight: bold;
+}
+
+/* This styles the logout button to be clean and modern.
+*/
+#logoutButton {
+  background: none; /* Remove background color */
+  border: 3px solid #ccc; /* Add a subtle border */
+  color: #333; /* Keep the red color for logout action */
+  font-weight: bold;
+  font-size: 0.9rem; /* Use the same font size as surrounding text */
+  padding: 2px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+}
+
+/* Adds a simple hover effect */
+#logoutButton:hover {
+  background-color: #d9534f;
+  color: white;
+}
+.header-content p {
+    margin: 30px;
+    cursor: pointer;
+}
+#loginNavButton {
+    font-weight: bold;
+    text-decoration: underline;
+    color: inherit;
+}
+#loginNavButton:hover {
+    color: #6BBBFF;
+}
+/* --- MODAL OVERLAY STYLES --- */
+.modal-overlay {
+    position: fixed;
+    z-index: 2000; /* On top of everything */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6); /* Dimmed background */
+    overflow: auto; /* Allow scrolling if list gets long */
+}
+
+/* --- MODAL BOX STYLES --- */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px; /* Limit width so it looks good */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- CLOSE BUTTON --- */
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal:hover { color: black; }
+
+.section {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+.input-group input {
+    flex: 1; /* Fill available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.list-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remove-btn {
+    background-color: #dc3545 !important; /* Force red */
+    padding: 5px 10px !important;
+    font-size: 12px;
+}
+.message.success { color: green; padding: 5px; }
+.message.error { color: red; padding: 5px; }
+#topicsList, #sourcesList {
+    display: block !important;
+    width: 100% !important;
+    min-height: 10px;
+    background-color: white; /* Ensure background is white */
+}
+
+#topicsList .list-item, 
+#sourcesList .list-item {
+    color: #000 !important; /* FORCE BLACK TEXT */
+    background-color: #f0f0f0 !important; /* Light gray background */
+    border: 1px solid #ccc !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 10px !important;
+    margin-bottom: 5px !important;
+}
+#blockingModal select {
+    width: 100%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px; /* Match button height */
+}
+/* The Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* The Dropdown Box (Hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align to right edge of icon */
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Show on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.quickSearch {
+    font-size: 14px !important;       /* Force smaller text (default h3 is huge) */
+    font-weight: 500;                 /* Less bold */
+    padding: 6px 15px;                /* Slimmer padding inside the bubble */
+    margin: 10px;                      /* Space between bubbles */
+    border: 1px solid #ccc;           /* Subtle border */
+    border-radius: 20px;              /* Rounded "pill" shape */
+    display: inline-block;            /* Ensures they sit next to each other */
+    cursor: pointer;
+    transition: all 0.2s ease;        /* Smooth hover animation */
+    background-color: white;
+    color: #555;
+}
+
+.quickSearch:hover {
+    background-color: #6BBBFF;        
+    color: white;
+    border-color: #6BBBFF;
+    transform: translateY(-2px);      /* Slight lift effect */
+}
