@@ -1,0 +1,1092 @@
+html,body{
+    margin: 0px;
+   height: 100%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    padding: 5px;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden
+}
+
+.header{
+    display: flex;
+   flex-direction: row;
+   gap: 20px;
+    vertical-align: middle;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    width: 100%;
+    align-items: center;
+  
+}
+
+.header button{
+    background-color: #6BBBFF;
+        border-radius: 20px;
+        letter-spacing: 1px;
+}
+
+.header img{
+    width: 50px;
+    height: auto;
+}
+
+
+
+hr{
+    color: black;
+    width: 100%;
+}
+
+.logo{
+    margin-right: auto;
+    padding-left: 30px;
+}
+.loginIcon{
+    padding-right: 30px;
+}
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+}
+
+footer hr {
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 0.9em;
+
+}
+
+.action{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.action h1{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+       align-self: flex-start;
+}
+#discoveredSection, 
+#recommendedSection, 
+#hybridSection, 
+#videoSection, 
+#breakingSection {
+    display: flex;              /* Align items in a row */
+    flex-direction: row;        /* Force horizontal direction */
+    overflow-x: auto;           /* Enable horizontal scrolling */
+    overflow-y: hidden;         /* Hide vertical overflow */
+    gap: 20px;                  /* Space between cards */
+    padding: 10px 5px;          /* Padding to prevent shadow clipping */
+    
+    /* Smooth scrolling behavior */
+    scroll-behavior: smooth;
+    
+    /* Firefox Scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #6BBBFF #f0f0f0;
+
+    padding: 10px 5px 20px 5px;
+}
+#discoveredSection::-webkit-scrollbar,
+#recommendedSection::-webkit-scrollbar,
+#hybridSection::-webkit-scrollbar,
+#videoSection::-webkit-scrollbar,
+#breakingSection::-webkit-scrollbar{
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+#discoveredSection::-webkit-scrollbar-track,
+#recommendedSection::-webkit-scrollbar-track,
+#hybridSection::-webkit-scrollbar-track,
+#videoSection::-webkit-scrollbar-track,
+#breakingSection::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#discoveredSection::-webkit-scrollbar-thumb,
+#recommendedSection::-webkit-scrollbar-thumb,
+#hybridSection::-webkit-scrollbar-thumb,
+#videoSection::-webkit-scrollbar-thumb, 
+#breakingSection::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 4px;
+}
+
+#discoveredSection::-webkit-scrollbar-thumb:hover,
+#recommendedSection::-webkit-scrollbar-thumb:hover,
+#hybridSection::-webkit-scrollbar-thumb:hover,
+#videoSection::-webkit-scrollbar-thumb:hover, 
+#breakingSection::-webkit-scrollbar-thumb:hover{
+    background: #6BBBFF; /* Active color on hover */
+}
+
+.news-widget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border-radius: 10px;
+    min-width: 300px;   /* Force a fixed width */
+    max-width: 300px;   /* Prevent them from getting too big */
+    height: 450px;      /* Set a fixed height for uniformity */
+    background-color: #D2ECF7;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid black;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+
+.news-widget a{
+    flex-grow: 1;          /* Fill all space above the button */
+    overflow-y: scroll;    /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding-right: 5px;
+    padding-bottom: 10px;  /* Space between text and button */
+
+    /* HIDE SCROLLBAR (Clean Look) */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: thin;  /* Firefox */
+}
+
+.news-widget h3{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin: 0 4px 4px 0;
+}
+
+.news-widget h4 {
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 4px 0;
+    color: #333;
+}
+
+.news-widget h5{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 2px 0;
+}
+
+.news-widget h2{
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.news-widget img,
+.news-widget iframe{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0; /* Only round top corners */
+    object-fit: cover;
+    flex-shrink: 0; /* Don't let image shrink */
+    display: block;
+    margin-bottom: 5px;
+
+}
+.news-widget button.save-button {
+    flex-shrink: 0; /* Don't let the button shrink */
+    margin-top: 10px; /* Add space between link and button */
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+.news-widget button.save-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.recommendedSection{ 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 50px;
+    width: 100%;
+}
+
+
+::-webkit-scrollbar {
+    display: none; /*for scroll thing to go away */
+}
+
+
+.header input{
+   margin-right: auto;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f6f8fb;
+  color: #333;
+}
+
+/* Wrapper to keep everything positioned relative */
+html,body{
+    margin: 0px;
+   height: 100%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    padding: 5px;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden
+}
+
+.header{
+    display: flex;
+   flex-direction: row;
+   gap: 20px;
+    vertical-align: middle;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    width: 100%;
+    align-items: center;
+  
+}
+
+.header img{
+    width: 50px;
+    height: auto;
+}
+
+
+
+hr{
+    color: black;
+    width: 100%;
+}
+
+.logo{
+    margin-right: auto;
+    padding-left: 30px;
+}
+.loginIcon{
+    padding-right: 30px;
+}
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+}
+
+footer hr {
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 0.9em;
+
+}
+
+.action{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.action h1{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+       align-self: flex-start;
+}
+
+.discoveredSection{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 50px;
+    width: 100%;
+}
+
+.videoSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 50px;
+    width: 100%;
+}
+
+
+::-webkit-scrollbar {
+    display: none; /*for scroll thing to go away */
+}
+
+
+.header input{
+   margin-right: auto;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f6f8fb;
+  color: #333;
+}
+
+/* Wrapper to keep everything positioned relative */
+#weather-section {
+    width: 100%;           /* don't force full width */
+    display: flex;
+    justify-content: flex-start; /* push weather bar to the right */
+    margin: 10px 20px 0 0;    /* space from top-right */
+    box-sizing: border-box;
+    position: relative;        /* forecast container will position relative to this */
+    z-index: 10;
+}
+.wrapper {
+    position: relative; /* forecast will position relative to this */
+    display: flex;
+    justify-content: flex-end; /* keep bar on the right */
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Weather bar styling */
+.weather-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #f6f8fb, #6fb1fc);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 6px 10px;
+    width: 180px;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+/* Forecast container: hidden by default, appears to the left */
+.forecast-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%; /* appear to the left of the weather bar */
+    display: flex;
+    gap: 6px;
+    background-color: #f6f8fb;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Button on left */
+#expand-forecast {
+    margin-right: 6px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Temperature */
+.temperature {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    margin-right: 6px;
+}
+
+/* Icon */
+.icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 6px;
+}
+
+/* Details */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.6rem;
+    line-height: 1.1;
+}
+
+.details .condition {
+    font-weight: 600;
+}
+
+.details .city {
+    opacity: 0.85;
+}
+
+/* Each forecast day inside forecast container */
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.forecast-day p, .forecast-day img {
+    margin: 2px 0;
+    
+}
+.forecast-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%; /* expands to the left */
+    display: flex;
+    gap: 4px;                 /* smaller gap between days */
+    background-color: #f6f8fb;
+    border-radius: 8px;
+    padding: 4px;              /* smaller padding */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    min-width: 240px;
+    justify-content: space-around;
+    min-height: 50px;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.55rem;        /* smaller font for text */
+    gap: 2px;                  /* small spacing inside each day block */
+}
+
+.forecast-day-name {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.forecast-temp {
+    font-weight: normal;
+}
+
+.forecast-icon {
+    width: 20px;               /* smaller icon */
+    height: 20px;
+    object-fit: contain;
+}
+
+html,body{
+    margin: 0px;
+   height: 100%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    padding: 5px;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden
+}
+
+.header{
+    display: flex;
+   flex-direction: row;
+   gap: 20px;
+    vertical-align: middle;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    width: 100%;
+    align-items: center;
+  
+}
+
+.header img{
+    width: 50px;
+    height: auto;
+}
+
+
+
+hr{
+    color: black;
+    width: 100%;
+}
+
+.logo{
+    margin-right: auto;
+    padding-left: 30px;
+}
+.loginIcon{
+    padding-right: 30px;
+}
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+}
+
+footer hr {
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 0.9em;
+
+}
+
+.action{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.action h1{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+       align-self: flex-start;
+}
+
+.discoveredSection{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 50px;
+    width: 100%;
+}
+
+body {
+  margin: 20px;
+  font-family: "Inter", sans-serif;
+  background: #f6f8fb;
+  color: #333;
+}
+
+/* Wrapper to keep everything positioned relative */
+#weather-section {
+    width: 100%;           /* don't force full width */
+    display: flex;
+    justify-content: flex-start; /* push weather bar to the right */
+    margin: 10px 20px 0 0;    /* space from top-right */
+    box-sizing: border-box;
+    position: relative;        /* forecast container will position relative to this */
+    z-index: 10;
+}
+.wrapper {
+    position: relative; /* forecast will position relative to this */
+    display: flex;
+    justify-content: flex-end; /* keep bar on the right */
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Weather bar styling */
+.weather-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #f6f8fb, #6fb1fc);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 6px 10px;
+    width: 180px;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+/* Forecast container: hidden by default, appears to the left */
+.forecast-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%; /* appear to the left of the weather bar */
+    display: flex;
+    gap: 6px;
+    background-color: #f6f8fb;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Button on left */
+#expand-forecast {
+    margin-right: 6px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Temperature */
+.temperature {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    margin-right: 6px;
+}
+
+/* Icon */
+.icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 6px;
+}
+
+/* Details */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.6rem;
+    line-height: 1.1;
+}
+
+.details .condition {
+    font-weight: 600;
+}
+
+.details .city {
+    opacity: 0.85;
+}
+
+/* Each forecast day inside forecast container */
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.forecast-day p, .forecast-day img {
+    margin: 2px 0;
+    
+}
+.forecast-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%; /* expands to the left */
+    display: flex;
+    gap: 4px;                 /* smaller gap between days */
+    background-color: #f6f8fb;
+    border-radius: 8px;
+    padding: 4px;              /* smaller padding */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    min-width: 240px;
+    justify-content: space-around;
+    min-height: 50px;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.55rem;        /* smaller font for text */
+    gap: 2px;                  /* small spacing inside each day block */
+}
+
+.forecast-day-name {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.forecast-temp {
+    font-weight: normal;
+}
+
+.forecast-icon {
+    width: 20px;               /* smaller icon */
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Recent viewed articles AND Saved articles*/
+#history {
+    margin: 20px;
+    padding: 10px 10px;
+    
+}
+#savedArticlesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 10px 10px;
+    align-self: flex-start; /* ensure it aligns left within the centered .container */
+}
+
+/* Force #history to align left inside the centered container */
+#history {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+
+
+#savedArticlesContainer .news-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#savedArticlesContainer .news-widget a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1.1em;
+  display: block;
+  padding: 8px 0;
+}
+
+#savedArticlesContainer .news-widget a:hover {
+  color: #3498db;
+}
+
+/* Article title */
+#savedArticlesContainer .news-widget h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #2c3e50;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Article timestamp */
+#savedArticlesContainer .news-widget p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+/* Save button (disabled state) */
+#savedArticlesContainer .news-widget button {
+  background-color: #e0e0e0;
+  color: #666;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  font-size: 0.9em;
+}
+/* --- MODAL OVERLAY STYLES --- */
+.modal-overlay {
+    position: fixed;
+    z-index: 2000; /* On top of everything */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6); /* Dimmed background */
+    overflow: auto; /* Allow scrolling if list gets long */
+}
+
+/* --- MODAL BOX STYLES --- */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px; /* Limit width so it looks good */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- CLOSE BUTTON --- */
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal:hover { color: black; }
+
+.section {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+.input-group input {
+    flex: 1; /* Fill available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.list-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remove-btn {
+    background-color: #dc3545 !important; /* Force red */
+    padding: 5px 10px !important;
+    font-size: 12px;
+}
+.message.success { color: green; padding: 5px; }
+.message.error { color: red; padding: 5px; }
+#topicsList, #sourcesList {
+    display: block !important;
+    width: 100% !important;
+    min-height: 10px;
+    background-color: white; /* Ensure background is white */
+}
+
+#topicsList .list-item, 
+#sourcesList .list-item {
+    color: #000 !important; /* FORCE BLACK TEXT */
+    background-color: #f0f0f0 !important; /* Light gray background */
+    border: 1px solid #ccc !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 10px !important;
+    margin-bottom: 5px !important;
+}
+#blockingModal select {
+    width: 100%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px; /* Match button height */
+}
+/* The Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* The Dropdown Box (Hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align to right edge of icon */
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Show on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu Text (Hello Message) */
+.menu-text {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Logout Button Styling */
+.menu-item {
+    background-color: white;
+    color: #d9534f; /* Red for logout */
+    border: 1px solid #d9534f;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.menu-item:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
+
+#history,
+#savedArticlesContainer {
+    display: flex;              /* Enables Flexbox */
+    flex-direction: column;     /* Stacks items vertically */
+    gap: 15px;                  /* Adds space between the cards */
+    
+    width: 100%;
+    max-width: 800px;           /* Limits width for readability */
+    margin: 20px 0 20px 20px;   /* Align left (Top, Right, Bottom, Left) */
+    padding: 10px;
+    
+    align-self: flex-start;     /* Force left alignment in parent */
+    box-sizing: border-box;
+}
+
+/* 2. Item Styling (The Cards) */
+/* Target direct children div of both containers */
+#history > div,
+#savedArticlesContainer .news-widget, 
+#savedArticlesContainer > div {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    border: 1px solid #eee;     /* Clean border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Cards */
+#history > div:hover,
+#savedArticlesContainer .news-widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 3. Text & Link Styling */
+#history a,
+#savedArticlesContainer a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 1.1em;
+    display: block;
+    padding-bottom: 5px;
+}
+
+#history a:hover,
+#savedArticlesContainer a:hover {
+    color: #3498db; /* Blue on hover */
+}
+
+/* Timestamps inside History */
+#history p,
+#history span {
+    margin: 5px 0 0 0;
+    font-size: 0.85em;
+    color: #7f8c8d;
+}
+
+/* 4. Save/Remove Button Styling */
+#savedArticlesContainer button,
+.remove-bookmark-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <header>
+    <div class="top-left">
+
+    </div>
+    <h2 class="logo">iNews</h2>
+    <button id="changeDisplayButton">Dark Mode</button>
+
+    <p class="homeIcon">
+      <a href="index.html" target="blank">
+        <img src="./images/3441648.png" alt="Homepage" width="40" height="40">
+      </a>
+    </p>
+  </header>
+  <div class="loginBox">
+    <div class="container login-card" id="container">
+      <h1>Welcome to iNews</h1>
+
+      <div class="tabs">
+        <button id="showLogin" class="active">Login</button>
+        <button id="showSignup">Sign Up</button>
+      </div>
+
+      <div class="form-container" id="loginForm">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" />
+        <input type="password" id="loginPassword" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <a href="#" id="showForgotPassword" class="form-link"
+          style="display:block; margin-top:10px; color: blue; cursor: pointer;">Forgot Password?</a>
+      </div>
+      <div class="form-container hidden" id="signupForm">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupName" placeholder="Name" />
+        <input type="email" id="signupEmail" placeholder="Email" />
+        <input type="password" id="signupPassword" placeholder="Password" />
+        <button onclick="signup()">Sign Up</button>
+
+      </div>
+      <div class="form-container hidden" id="forgotForm">
+        <h2>Reset Password</h2>
+        <p style="font-size: 14px; color: #555;">
+          Enter your email, and we'll send you a reset link.
+        </p>
+        <input type="email" id="forgotEmail" placeholder="Email" required>
+        <button type="button" onclick="requestPasswordReset()">Send Reset Link</button>
+        <a href="#" id="backToLogin" class="form-link">Back to Login</a>
+      </div>
+      <div id="message"></div>
+    </div>
+  </div>
+  <script src="loginScript.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
