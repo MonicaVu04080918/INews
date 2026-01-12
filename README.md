@@ -5,7 +5,7 @@ Inews is a personalized news discovery web application aimed at giving users onl
 and the app aggreates multiple live articles from multiple news sources.
 
 # Live Site
-https://testertester-production.up.railway.app/
+
 
 
 # Features
